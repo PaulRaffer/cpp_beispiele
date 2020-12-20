@@ -1,0 +1,382 @@
+Tools
+  Compiler
+    Clang
+    GCC
+    ...
+  Linker
+  Debugger
+    Breakpoints
+    ...
+  Entwicklungsumgebungen
+    Visual Studio Code
+    CLion
+    Code::Blocks
+    ...
+
+
+Kommentare
+  Einzeilenkommentar (//...)
+  Mehrzeilenkommentar (/*...*/)
+  Dokumentationskommentare
+
+
+Datentypen
+  Eingebaute Datentypen
+    void
+    Ganzzahltypen
+      short
+      int
+      long
+      long long
+      Zeichentypen
+        ASCII (char)
+        Unicode (wchar_t)
+      Vorzeichenbehaftete Ganzzahltypen (signed)
+      Vorzeichlose Ganzahltypen (unsigned)
+    Boolean (bool)
+    Gleitkommatypen
+      float
+      double
+      long double
+  Typen der Standardbibliothek
+    Container
+      std::vector
+        std::vector<bool>
+      std::array
+      std::list
+      std::map
+      ...
+    Strings
+      std::string
+        .length()
+      Character-Arrays (char[])
+      std::string_view
+    ...
+  Eigene Typen definieren (siehe Klassen, Aufzählungstypen und Varianten)
+  Literale
+
+Variablen und Objekte
+  Deklaration (extern)
+  Definition
+  Initialisierung
+    ... mit {}
+    ... mit ()
+    ... mit =
+    ... mit auto und =
+    ... mit = und {}
+    ...
+  Konstanten (const)
+    Compilezeit Konstanten
+      constexpr
+        Inline Compilezeit Konstanten (inline constexpr)
+      #define/#undef
+  Globale Variablen
+  Statische Variablen (static)
+  Maybe unused attribute ([[maybe_unused]])
+
+
+Ein-/Ausgabe
+  Tastatureingabe (std::cin)
+  Bildschirmausgabe (std::cout)
+    ...
+  Files
+    Lesen (std::ifstream)
+    Schreiben (std::ostream)
+  Stringstreams
+    ...
+  ...
+  Ein-/Ausgabeoperatoren überladen
+
+
+Auswahl
+  Einfache Auswahl (if else)
+    if
+    else
+    else if
+    Ternärer Operator (?:)
+    Compilezeit Auswahl
+      if constexpr
+      #if/#ifdef/#ifndef/#else/#elif/#endif
+  Mehrfache Auswahl (switch)
+    Fall label (case)
+    Standardfall (default)
+    break
+    Fallthrough attribute ([[fallthrough]])
+    Likely/unlikely attributes ([[likely]] [[unlikely]]) (C++20)
+
+Schleifen
+  Kopfgesteuerte Schleife (while)
+  Fußgesteuerte Schleife (do while)
+  Zählschleife (for)
+  Range-based-for (for)
+  std::for_each
+  break
+  continue
+  Endlosschleife
+
+Sprünge
+  goto
+  Label
+
+Referenzen (T&)
+  R-Wert Referenzen (T&&)
+    Move-semantics (std::move)
+    Forwarding references
+      Perfect forwarding (std::forward)
+        ...
+        
+Zeiger (T*)
+  Rohe Zeiger
+    new
+    delete
+  Adressoperator (&)
+  Dereferenzierungsoperator (*)
+  Konstante Zeiger (T * const)
+  Zeiger auf Konstanten (T const *)
+  Konstante Zeiger auf Konstanten (T const * const)
+  Zeiger auf Funktionen (T (*f)())
+  Zeiger auf Zeiger (auf Zeiger ...) (T**)
+  Null-Zeiger (nullptr/NULL)
+  this-Zeiger (siehe Klassen)
+  void-Zeiger (void*)
+  Iteratoren
+    Konstante Iteratoren
+  Smarte Zeiger
+    std::unique_ptr
+    std::shared_ptr
+    std::weak_ptr
+  Parameterübergabe
+
+
+Arrays
+  std::array (siehe Container)
+  C-Arrays (T[])
+
+
+Funktionen
+  Rückgabewert
+    Kein Rückgabewert (void)
+    Ein Rückgabewert
+    Meherere Rückgabewerte
+      Struktur zurückgeben (struct)
+      std::tuple/std::pair zurückgeben
+      Out-Parameter befüllen (siehe Parameter)
+    Nodiscard attribute ([[nodiscard]])
+    Noreturn attribute ([[noreturn]])
+    Referenzen zurückgeben (T& f())
+    Konstanten zurückgeben (T const f())
+    Trailing return types (auto f() -> T)
+    Return type deduction (auto f())
+  Parameter
+    In-Parameter
+    void func(int i);
+    void func(std::string const & s);
+    In-Out-Parameter
+    void func(int & i);
+    Out-Parameter
+    void func(int & i);
+    Standardargumente
+    void func(int i = 7);
+
+    
+  Benutzerdefinierte Literale (operator""_)
+  Inline Funktionen (inline)
+  Compilezeit Funktionen (constexpr)
+  Funktionen Überladen (siehe Vielgestaltigkeit)
+  Lambdas ([](){})
+    Captures
+  Funktionsobjekte (siehe Klassen)
+  std::function
+  Funktionszeiger (siehe Zeiger)
+  Rekursion
+  Hauptprogramm (main)
+    Rückgabewert des Hauptprogramms (int)
+      EXIT_SUCCESS
+      EXIT_FAILURE
+      Impliziter Rückgabewert
+    Parameter des Hauptprogramms (int, char**)
+
+Aufzählungstypen
+  enum class
+  enum
+
+Klassen (class/struct)
+  Eigenschaften
+    Statische Eigenschaften (static)
+    Veränderliche Eigenschaften (mutable)
+  Methoden
+    Konstruktoren (Klassenname)
+      Initialisierungslisten
+      Standardkonstruktor
+      Konvertierungskonstruktoren
+      Explizite Konstruktoren (explicit)
+      Kopierkonstruktor
+      Verschiebekonstruktor
+      Compilezeit Konstruktoren (constexpr)
+    Zuweisungsoperatoren
+      Kopierzuweisung
+      Verschiebungszuweisung
+    Destruktoren (~Klassenname)
+    Compilergenerierte Methoden
+    Compilezeit Methoden (constexpr)
+    Statische Methoden (static)
+    Operatoren überladen (siehe statische Vielgestaltigkeit)
+  this-Zeiger
+
+Objektorientierte Programmierung (OOP)
+  Datenkapselung
+    Zugriffsklassen
+      Privat (private)
+      Öffentlich (public)
+      Geschützt (protected)
+    Freunde (friend)
+    Setter und Getter
+
+  Vielgestaltigkeit
+    Statische Vielgestaltigkeit
+      Templates (template)
+        Templateparameter
+            Typ-Templateparameter
+            Wert-Templateparamerter
+            Template-Templateparameter
+            Standardtemplateargumente
+          Variadic templates
+             Parameter packs
+               Fold expressions
+          Funktionstemplates
+            auto Parameter (C++20)
+          Klassentemplates
+          Typaliastemplates
+          Variablentemplates
+          Konzepte (concept) (C++20)
+            Konzepte der Standardbibliothek
+            Eigene Konzepte definieren
+          Templates spezialisieren
+            Templates teilweise spezialisieren
+          Template-Metaprogrammierung (vermeiden!)
+        Funktionen überladen
+          Operatoren überladen
+            Vergleichsoperatoren (< > <= >= == !=)
+              Spaceship Operator (<=>) (C++20)
+            Arithmetische Operatoren (+ - * /)
+            Zuweisungsoperatoren (= += -= *= /=)
+            Pre/Post Increment/Decrement (++ --)
+            Konvertierungsoperatoren (operator Type)
+            operator new/delete
+      Dynamische Vielgestaltigkeit
+        Vererbung
+          Ist ein ... (public)
+          Hat ein ... (private)
+          Virtuelle Methoden (virtual) (siehe Dynamische Vielgestaltigkeit)
+            Rein virtuelle Methoden
+            Virtuelle Destruktoren
+          Abstrakte Klassen (virtual = 0)
+          Entgültige Methoden (final)
+          Entgültige Klassen (final)
+          Konstruktoren vererben
+          Mehrfachvererbung
+          Virtuelle Vererbung
+        Varianten
+          std::variant
+          C-Varianten (union)
+
+Typumwandlungen
+  Explizite Typumwandlungen
+    normal C++-Cast
+    static_cast
+    dynamic_cast
+    const_cast
+    reinterpret_cast
+    C-Cast
+  Implizite Typumwandlungen
+    Typumwandlunden eingebauter Typen
+    Typumwandlunden eigener Typen
+      Konvertierungskonstruktoren
+      Konvertierungsoperatoren
+
+Fahlerbehandlung
+  Exceptions
+    try
+    catch
+      catch (...)
+    throw
+    noexcept
+      noexcept(bool)
+    std::exception
+      .what()
+  Fehlercodes zurückgeben
+
+
+Concurrency
+  Multithreading
+    std::thread
+      .join()
+      .detach()
+    std::mutex
+  Coroutinen (C++20)
+    co_return
+    co_yield
+    co_await
+
+
+Reflexion (C++23?)
+  ???
+Injektion (C++23?)
+  ???
+Metaklassen (C++26?)
+  ???
+
+Projektstruktur
+  Namensräume
+    Anonyme Namensräume
+    Inline Namensräume
+    Verschachtelte Namensräume
+    Namensraum std
+  Files
+    bis C++20
+      Headerfiles (*.hpp;*.h)
+      Sourcefiles (*.cpp;*.cxx;*.cc;*.C)
+    Module (C++20)
+      Interface-Einheit (*.ipp;*.cppm)
+      Implementierungseinheit (*.cpp)
+      Partitionen
+      Module importieren
+      Standardmodule
+
+Bibliotheken
+  Standardbibliothek (std::)
+    STL (Standard Template Library)
+      Container
+        std::vector
+        std::array
+        std::list
+        ...
+      Algorithmen
+        std::transform
+        std::filter
+        std::for_each
+        std::reduce
+        std::sort
+        std::all_of
+        std::any_of
+        std::none_of
+        ...
+  Boost (boost::)
+    Boost test
+    boost::regex
+    ...
+  GSL (gsl::)
+    ...
+  ...
+
+
+Präprozessor
+  #include
+  #define/#undef
+  #if/#ifdef/#ifndef/#else/#elif/#endif
+  #pragma
+
+Type traits
+  Type traits der Standardbibliothek
+  Type traits definieren
+    std::enable_if

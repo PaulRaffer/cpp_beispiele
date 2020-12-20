@@ -15,7 +15,7 @@ int main()
 	auto i5{7};
 	// Varianten mit ()
 	
-	
 	// Zuweisungen:
     i1 = 5; // Wert von i1 ändert sich von 7 auf 5
 }
+

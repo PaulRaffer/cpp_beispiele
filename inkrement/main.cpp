@@ -2,11 +2,11 @@
 
 // PRE-INCREMENT:
 //
-// x = x + 1
+// y = (x = x + 1)
 // ODER
-// x += 1
+// y = (x += 1)
 // ODER
-// ++x
+// y = ++x
 
 // POST-INCREMENT:
 //
@@ -16,13 +16,14 @@
 // y = x
 // x += 1
 // ODER
+// x = 2
 // y = x++
 
 int main()
 {
     int i = 7;
     int j = 7;
-
+    
     int zi = i++;
     int zj = ++j;
 

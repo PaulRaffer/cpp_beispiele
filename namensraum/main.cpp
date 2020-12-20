@@ -3,9 +3,9 @@
 namespace num_func
 {
 	
-int five(); // Prototyp
+int func(); // Prototyp
 
-int five()
+int func()
 {
     return 5;
 }
@@ -14,5 +14,6 @@ int five()
 
 int main()
 {
-    std::cout << num_func::func(); // Funktion 'five' in Namensraum 'num_func' aufrufen und Ergebnis ausgeben
+    int i = func() + 4; // Funktion 'func' in Namensraum 'num_func' aufrufen und Ergebnis ausgeben
+    std::cout << i;
 }

@@ -3,17 +3,12 @@
 
 int main()
 {
-    int number;
+    int number = 7;
     bool is_prime = true;
 
-    /*i = i + 1
-    i += 1
-    i++
-    ++i
-    */
 
-    std::cout << "Gib eine Zahl ein";
-    std::cin >> number;
+
+    //std::cout << "Gib eine Zahl ein";
 
     if (number % 2 == 0)
         is_prime = false;
